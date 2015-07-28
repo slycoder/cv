@@ -1,0 +1,198 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{scrartcl}
+
+\reversemarginpar % Move the margin to the left of the page 
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned,NoDate]{currvita} % Use the currvita style for the layout of the document
+\usepackage[left=0.5in,right=0.5in,top=0.5in,bottom=0.5in]{geometry}
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+\newcommand{\hll}[1]{{\color{Maroon}\textsc{#1}}}
+\newcommand{\hlll}[1]{{\color{CadetBlue}\textsc{#1}}}
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+
+%\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+%\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\NewEntry}[2]{\noindent #1 #2 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.25em}} % Add some white space after each new entry
+
+\newcommand{\IndentEntry}[3]{\raggedright\hangindent=2em\hangafter=0 \noindent {\footnotesize #1 {\sc \color{Maroon}#2} #3}
+\vspace{0.25em}}
+
+% Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+
+\newcommand{\Description}[1]{\raggedright\footnotesize{#1}\par\normalsize\vspace{0.5em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{Jonathan Chang}} % Your name
+
+% \noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+\begin{flushright}{\vspace{-2.75em}
+{\href{mailto:slycoder@gmail.com}{slycoder@gmail.com}} \\
+{+1 (310) 425 3759}
+}\end{flushright}
+
+%\vspace{1em} % Extra white space between the personal information section and goal
+\vspace{-0.25em}
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Work Experience}\vspace{0.5em}
+
+\NewEntry{2009--Present, Data Scientist, \hll{Facebook}}
+
+\Description{Mined and analyzed data from a variety of sources. Applied large-scale machine learning techniques to solve prediction problems which power user-facing products. Developed tools and infrastructure to make data manipulation and analysis easier company-wide.}
+
+\IndentEntry{2012--Present}{User Modeling Team}{
+  Tech lead on efforts to improve and consolidate machine learning algorithms
+  for predicting user attributes.  Work closely with both front-end and
+  infrastructure teams to develop impactful predictions.
+}
+
+\IndentEntry{2010--2012}{Entities}{
+  Founding member of the Entities team which manages structured data on
+  Facebook. Helped develop techniques for entity extraction, deduplication,
+  disambiguation, etc.  Worked on a number of classification problems such as
+  authenticity.  Focused especially on building databases for music and places
+  and was involved in the launch of those integrations on Facebook.
+}
+
+\IndentEntry{2009--2010}{Data Science Team}{
+  Used novel statistical machine learning to analyze the Facebook user base.  Projects included inferring user
+  ethnicity, analyzing intra- and inter-ethnic interactions, and predicting
+  user engagement. Blog posts are available for some analyses (e.g., \href{http://on.fb.me/1qOHwiY}{http://on.fb.me/1qOHwiY}, \href{http://on.fb.me/1uqyxab}{http://on.fb.me/1uqyxab}, \href{http://on.fb.me/1BwWijc}{http://on.fb.me/1BwWijc}).
+}
+
+\NewEntry{2007, Intern, \hll{Google}}
+
+\Description{Performed research on determining location relevance for the Books: Mapped project.}
+
+%\NewEntry{2006}{Intern, \hll{INRIA}}
+
+%\Description{Performed research in and developed novel modular simulation methodologies for simulating processor architectures.}
+
+%\NewEntry{2002}{Intern, \hll{nVidia}}
+
+%\Description{Hardware engineering intern.  Designed and tested portions of production graphics processor.}
+%------------------------------------------------
+
+\vspace{0.25em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Education}\vspace{0.5em}
+
+\NewEntry{2003--2009}{Doctor of Philosophy, \hll{Princeton University}}
+
+\Description{GPA: 3.8\ \ $\cdotp$\ \ \textit{Machine learning}, Department of Electrical Engineering\newline 
+Thesis: \textit{Uncovering, Understanding, and Predicting Links}\newline
+Advisor: Prof.~David \textsc{Blei}\newline
+Released \texttt{lda} for R, a commonly used package for topic modeling.}
+
+%------------------------------------------------
+
+\NewEntry{1999--2003}{Bachelor of Science, \hll{California Institute of Technology}}
+
+\Description{GPA: 3.8\ \ $\cdotp$\ \ \textit{Electrical and Computer Engineering with Honors}}
+
+%------------------------------------------------
+
+\vspace{0.25em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Selected Publications}\vspace{0.5em}
+
+%------------------------------------------------
+
+\NewEntry{\hlll{Location$^3$: How Users Share and Respond to Location-Based Data on Social Networking Sites}}
+
+\Description{Jonathan Chang and Eric Sun. 
+\textit{Proceedings of the International Conference in Weblogs and Social Media (ICWSM), 2011.}}
+
+\NewEntry{\hlll{Not-so-latent Dirichlet Allocation: Collapsed Gibbs Sampling Using Human Judgments}}
+
+\Description{Jonathan Chang. 
+\textit{Proceedings of the NAACL HLT 2010 Workshop on Creating Speech and Language Data with Amazon's Mechanical Turk, 2010.}}
+
+\NewEntry{\hlll{ePluribus: Ethnicity on Social Networks}}
+
+\Description{Jonathan Chang, Itamar Rosenn, Lars Backstrom, and Cameron Marlow. 
+\textit{Proceedings of the International Conference in Weblogs and Social Media (ICWSM), 2010.}
+\textbf{Winner Best Paper Award}}
+
+\NewEntry{\hlll{Hierarchical Relational Models for Document Networks}}
+
+\Description{Jonathan Chang and David M. Blei. 
+\textit{Annals of Applied Statistics, Volume 4, Number 1, 2010.}}
+
+\NewEntry{\hlll{Reading Tea Leaves: How Humans Interpret Topic Models}}
+
+\Description{Jonathan Chang, Jordan Boyd-Graber, Sean Gerrish, Chong Wang, and David M. Blei. 
+\textit{Advances in Neural Information Processing Systems, 2009.}
+\textbf{Honorable Mention}}
+
+\NewEntry{\hlll{Connections Between the Lines: Augmenting Social Networks with Text}}
+
+\Description{Jonathan Chang, Jordan Boyd-Graber, and David M. Blei. 
+\textit{Proceedings of the 15th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 2009.}}
+
+\NewEntry{\hlll{Automatic Instruction-Level Software-Only Recovery Methods}}
+
+\Description{Jonathan Chang, George A. Reis, and David I. August. 
+\textit{Proceedings of the International Conference on Dependable Systems and Networks, 2006.}
+\textbf{Winner William C. Carter Award}}
+
+\NewEntry{\hlll{SWIFT: Software Implemented Fault Tolerance}}
+
+\Description{George A. Reis, Jonathan Chang, Neil Vachharajani, Ram Rangan, and David I. August.
+\textit{Proceedings of the Third International Symposium on Code Generation and Optimization, 2005.}
+\textbf{Winner Best Paper Award}}
+
+%----------------------------------------------------------------------------------------
+
+\end{cv}
+
+\end{document}
